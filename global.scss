@@ -1,0 +1,448 @@
+h1 .icon {
+  background-color: #5876a3;
+  mask-image: url("./src/styles/icons/standard/recipe.svg");
+  mask-size: contain;
+  -webkit-mask-image: url("./src/styles/icons/standard/recipe.svg");
+  -webkit-mask-size: contain;
+  width: 50px;
+  height: 50px;
+  display: block;
+  float: left;
+}
+
+h1 .txt {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #555;
+}
+
+h1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.error {
+  margin-left: 4rem;
+}
+
+.recipe__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-size: 8px;
+  margin-right: 1rem;
+}
+
+.recipe {
+  margin: 1rem 0 0 1rem;
+}
+
+.recipe ul {
+  margin: 1.5rem 0 0 4rem;
+  font-size: 14px;
+}
+
+li {
+  display: flex;
+  vertical-align: top;
+  margin-bottom: 0.5rem;
+}
+
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+
+  svg {
+    height: 6rem;
+    width: 6rem;
+    fill: blueviolet;
+    animation: rotate 4s infinite linear;
+  }
+}
+
+.randomRecipes {
+  margin-top: 1rem;
+}
+
+.randomRecipes li {
+  display: inline;
+}
+
+.favoritesList {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s 0.2s;
+  padding: 10px 0 0 0;
+  right: 36px;
+  &:hover, // hover trick 👍🏼
+  .btn_favorites:hover + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.favoritesList img {
+  height: 26px;
+  width: 26px;
+  object-fit: cover;
+  border-radius: 13px;
+  border: 1px solid #333;
+  margin-right: 6px;
+}
+
+.favoritesList button {
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  outline: none;
+  box-shadow: none;
+  text-align: left;
+}
+
+.favoritesList button:hover {
+  background-color: #d7d7d7;
+}
+
+.favoritesList button div {
+  float: left;
+}
+
+.favoritesList button .description {
+  width: 80%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.searchContainer {
+  border-radius: 25px;
+  width: 300px;
+}
+
+.searchResults ul {
+  margin-left: 12%;
+}
+
+.searchResults button {
+  width: 300px;
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 0;
+  border: 1px solid transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.searchResults button:hover {
+  border: 1px solid #333;
+}
+
+.searchResults div {
+  float: left;
+  vertical-align: top;
+  text-align: left;
+}
+
+.searchResults img {
+  height: 32px;
+  width: 32px;
+  background-color: #333;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #333;
+}
+
+.searchResults .description {
+  margin: 0 0 0 0.75rem;
+  width: 80%;
+}
+
+.pagination {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.pageCount {
+  text-align: center;
+}
+
+.back {
+  float: left;
+  height: 32px;
+  width: 32px;
+  background-color: #45c65a;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/back.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/back.svg");
+  -webkit-mask-size: cover;
+}
+.forward {
+  height: 32px;
+  width: 32px;
+  float: right;
+  background-color: #45c65a;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/forward.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/forward.svg");
+  -webkit-mask-size: cover;
+}
+
+.servings {
+  margin: 1rem 0;
+  font-size: 14px;
+}
+
+.portions {
+  margin-bottom: 1rem;
+}
+
+.portions button {
+  border-radius: 12px;
+  height: 24px;
+  width: 24px;
+  border: 0;
+}
+
+.portions .increment {
+  margin: 0 0.5rem;
+  mask-image: url("./src/styles/icons/utility/new.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/new.svg");
+  -webkit-mask-size: cover;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.portions .increment:hover {
+  border: 1px solid #0176d3;
+  background-color: #0176d3;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/new.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/new.svg");
+  -webkit-mask-size: cover;
+}
+
+.portions .decrement {
+  background-color: #0176d3;
+  mask-image: url("./src/styles/icons/utility/ban.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/ban.svg");
+  -webkit-mask-size: cover;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.portions .decrement:hover {
+  background-color: #0176d3;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/ban.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/ban.svg");
+  -webkit-mask-size: cover;
+}
+
+.bookmarker {
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background-color: #45c65a;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/bookmark_stroke.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/bookmark_stroke.svg");
+  -webkit-mask-size: cover;
+  position: absolute;
+  margin-left: 0.5rem;
+}
+
+button[data-update-to="true"] {
+  background-color: #056764;
+  border: 1px solid #056764;
+  color: #fff;
+}
+
+button[data-update-to="true"]:hover {
+  background-color: #06a59a;
+  border: 1px solid #06a59a;
+  color: #fff;
+}
+
+button[data-update-to="bookmarked"] {
+  mask-image: url("./src/styles/icons/utility/bookmark.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/bookmark.svg");
+  -webkit-mask-size: cover;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  transition: all 0.5s;
+}
+
+.addRecipeWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  transition: all 0.5s;
+  display: flex;
+}
+
+.addRecipeWindow h3 {
+  font-size: 1.25rem;
+}
+
+.addRecipeWindow .formParent {
+  margin: 0 auto;
+}
+
+.column {
+  float: left;
+  margin-left: 1rem;
+}
+
+.closeButton {
+  width: 50px;
+  height: 20px;
+}
+
+.cancel {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.cancel button {
+  height: 32px;
+  width: 32px;
+  border: 0;
+  background-color: #45c65a;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/clear.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/clear.svg");
+  -webkit-mask-size: cover;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.cancel button:hover {
+  background-color: #ba0517;
+  border: 1px solid #ba0517;
+}
+
+.searchForm {
+  display: flex;
+}
+
+.searchForm form {
+  width: 85%;
+}
+
+.searchForm input {
+  width: 70%;
+}
+
+.favorites {
+  width: 15%;
+  text-align: right;
+}
+
+.offScreen {
+  position: relative;
+  left: -9999%;
+  overflow: hidden;
+}
+
+.addRecipe {
+  margin-left: 1rem;
+  height: 32px;
+  width: 32px;
+  border: 0;
+  background-color: #45c65a;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/add.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/add.svg");
+  -webkit-mask-size: cover;
+}
+
+.btn_favorites {
+  height: 32px;
+  width: 32px;
+  border: 0;
+  background-color: #45c65a;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("./src/styles/icons/utility/bookmark_alt.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./src/styles/icons/utility/bookmark_alt.svg");
+  -webkit-mask-size: cover;
+}
+
+.resultsCols {
+  display: flex;
+  border: 0;
+}
+
+.resultsCols .results {
+  width: 30%;
+  margin-right: 1.5rem;
+}
+
+.resultsCols .recipeContainer {
+  width: 70%;
+}
+
+.resultsCols .recipeContainer h3 {
+  font-size: 20px;
+}
+
+.credits {
+  text-align: center;
+  margin: 1rem 0;
+}

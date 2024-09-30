@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recipes mvc</title>
+    <script type="module" src="./src/contoller/home.controller.js"></script>
+    <link
+      rel="stylesheet"
+      href="./src/styles/styles/salesforce-lightning-design-system.css"
+    />
+    <link rel="stylesheet" href="./global.scss" type="text/css" />
+  </head>
+
+    <div class="slds-card-wrapper container">
+      <h1><span class="icon"></span><span class="txt">Recipe Application</span></h1>
+      
+        <div class="slds-page-header header">
+
+          <div class="searchForm">
+            <form action="" id="theForm">
+            <input type="text" id="searchInput" placeholder="Search recipes" class="slds-input" />
+            <button class="slds-button slds-button_brand">Search</button>
+            </form>
+
+            <div class="favorites">
+              <button class="btn_favorites">
+              <span class="offScreen">Favorites</span>
+              </button>
+              <div class="favoritesList">
+                Bookmarks will display here
+              </div>
+            </div>
+
+          </div>
+
+          <div class="randomRecipes">
+            <ul>
+              <li><a href="#5ed6604591c37cdc054bc886" class="slds-button slds-button_neutral">Random Recipe One</a></li>
+              <li><a href="#664c8f193e7aa067e94e8534" class="slds-button slds-button_neutral">Random Recipe Two</a></li>
+              <li>
+                <button
+                  class="slds-button slds-button_success openButton addRecipe"
+                >
+                  <span class="offScreen">add</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      <br />
+
+      <div class="slds-box resultsCols">
+        <div class="slds-box results">
+          <div class="searchContainer"></div>
+            <div class="searchResults"></div>
+            <div class="pagination">
+              Search results will display here.
+            </div>
+          </div>
+
+          <div class="slds-box recipeContainer">          
+            <div class="recipe"></div>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="credits">
+      This app utilizes the
+      <a href="https://forkify-api.herokuapp.com/v2/" target="_blank"
+        >Forkify API</a
+      >
+    </div>    
+
+    <div class="overlay hidden"></div>
+    <div class="addRecipeWindow hidden">
+
+    <div class="cancel">
+    <button class="closeButton">
+      <span class="offScreen">Cancel</span>
+    </button>
+    </div>
+
+    <div class="slds-form-element__control formParent">
+    <form class="addRecipeForm">
+      <div class="column">
+        <h3>Recipe Information</h3>
+        
+        <div class="slds-form-element">
+          <label for="title" class="slds-form-element__label">Title:</label>
+          
+          <div class="slds-form-element__control">
+            <input type="text" id="title" class="slds-input" required name="title" />
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="sourceUrl" class="slds-form-element__label">Source URL:</label>
+          <input type="text" id="sourceUrl" class="slds-input" required name="sourceUrl" />
+        </div>
+
+        <div class="slds-form-element">
+          <label for="image" class="slds-form-element__label">Image:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="image" class="slds-input" required name="image" />
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="publisher" class="slds-form-element__label">Publisher:</label>
+          
+          <div class="slds-form-element__control">
+            <input type="text" id="publisher" class="slds-input" required name="publisher" />
+          </div>            
+        </div>
+
+        <div class="slds-form-element">
+          <label for="cookingTime" class="slds-form-element__label">Cooking Ttime:</label>
+
+          <div class="slds-form-element__control">
+            <input type="number" id="cookingTime" class="slds-input" required name="cookingTime" />
+          </div>            
+        </div>
+
+        <div class="slds-form-element">
+          <label for="servings" class="slds-form-element__label">Servings</label>
+
+          <div class="slds-form-element__control">
+            <input type="number" id="servings" class="slds-input" required name="servings" />
+          </div>            
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>Recipe Ingredients</h3>
+
+        <div class="slds-form-element">
+          <label for="ingredient1" class="slds-form-element__label">Ingredient 1:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="ingredient1" class="slds-input" name="ingredient-1" placeholder="0.5, kg, rice" />
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="ingredient2" class="slds-form-element__label">Ingredient 2:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="ingredient2" class="slds-input" name="ingredient-2" placeholder="0.5, kg, rice"/>
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="ingredient3" class="slds-form-element__label">Ingredient 3:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="ingredient3" class="slds-input" name="ingredient-3" placeholder="0.5, kg, rice"/>
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="ingredient4" class="slds-form-element__label">Ingredient 4:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="ingredient4" class="slds-input" name="ingredient-4" placeholder="0.5, kg, rice"/>
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="ingredient5" class="slds-form-element__label">Ingredient 5:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="ingredient5" class="slds-input" name="ingredient-5" placeholder="0.5, kg, rice"/>
+          </div>
+        </div>
+
+        <div class="slds-form-element">
+          <label for="ingredient6" class="slds-form-element__label">Ingredient 6:</label>
+
+          <div class="slds-form-element__control">
+            <input type="text" id="ingredient6" class="slds-input" name="ingredient-6" placeholder="0.5, kg, rice"/>
+          </div>
+        </div>
+
+      </div>
+      <input type="submit" value="" class="addRecipe"><span class="offScreen">Add Recipe</span></input>
+    </form>
+
+    </div>
+    </div>
+
+  </body>
+</html>
